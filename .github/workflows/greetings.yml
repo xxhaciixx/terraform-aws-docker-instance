@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  aliabim:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.TOKEN }}
+        issue-message: "HAYIRDIR CLOUD VITIAL"
+        pr-message: "I learned Github Action from Ali"
